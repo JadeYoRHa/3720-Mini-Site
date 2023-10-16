@@ -1,0 +1,177 @@
+/*NORMALIZING RULES*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*END NORMALIZING RULES*/
+
+/*GENERAL RULES*/
+
+body {
+    background-color: bisque;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 100px;
+    font-size: extra-large;
+    text-align: center;
+}
+
+/* BUTTONS */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+button {
+    box-shadow: 0 4px #999;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+.Recharge {
+    justify-self: end;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    transition-duration: 0.4s;
+}
+
+.Recharge:hover {
+    background-color: #4CAF50;
+    color: black;
+}
+
+.Recharge:active::after {
+    .Recharge {
+        background-color: #4CAF50;
+        color: yellow;
+    }
+}
+
+.Deplete {
+    justify-self: start;
+    background-color: red;
+    color: black;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    transition-duration: 0.4s;
+}
+
+.Deplete:hover {
+    background-color: darkred;
+    color: white;
+}
+
+/* BATTERY */
+
+.battery-container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.outter {
+    margin: auto;
+    border: 5px solid #333;
+    width: 150px;
+    height: 80px;
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.pole {
+    background-color: #333;
+    height: 30px;
+    width: 7px;
+    align-self: center;
+    justify-self: end;
+}
+
+.inner {
+    background-color: #333;
+    height: 100%;
+    opacity: 0;
+    flex: 1;
+    animation: charging-1;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    border-radius: 2px;
+    animation-fill-mode: forwards;
+}
+
+.inner:nth-child(2) {
+    margin: 0 3px;
+    animation: charging-2;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.inner:nth-child(3) {
+    animation: charging-3;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes charging-1 {
+
+    33%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes charging-2 {
+
+    0%,
+    33% {
+        opacity: 0;
+    }
+
+    66%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes charging-3 {
+
+    0%,
+    66% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
