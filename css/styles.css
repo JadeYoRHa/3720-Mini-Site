@@ -33,6 +33,14 @@ h1 {
     text-align: center;
 }
 
+.activity {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    font-size: large;
+    text-align: center;
+}
+
 /* BUTTONS */
 
 .grid-container {
@@ -46,12 +54,6 @@ button {
     box-shadow: 0 4px #999;
     overflow: hidden;
     cursor: pointer;
-}
-
-button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 2px #666;
-    transform: translateY(4px);
 }
 
 .Recharge {
@@ -70,11 +72,10 @@ button:active {
     color: black;
 }
 
-.Recharge:active::after {
-    .Recharge {
-        background-color: #4CAF50;
-        color: yellow;
-    }
+.Recharge:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
 }
 
 .Deplete {
@@ -91,6 +92,12 @@ button:active {
 .Deplete:hover {
     background-color: darkred;
     color: white;
+}
+
+.Deplete:active {
+    background-color: darkred;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
 }
 
 /* BATTERY */
