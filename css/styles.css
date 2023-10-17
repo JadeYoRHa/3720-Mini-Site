@@ -134,50 +134,22 @@ button {
     animation-duration: 3s;
     animation-iteration-count: 1;
     border-radius: 2px;
-    animation-fill-mode: forwards;
+    animation-fill-mode:both;
+    transition: 1s;
 }
 
 .inner:nth-child(2) {
     margin: 0 3px;
-    animation: charging-2;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+    animation-delay: 1s;
 }
 
 .inner:nth-child(3) {
-    animation: charging-3;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+    animation-delay: 2s;
 }
 
 @keyframes charging-1 {
 
     33%,
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes charging-2 {
-
-    0%,
-    33% {
-        opacity: 0;
-    }
-
-    66%,
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes charging-3 {
-
-    0%,
-    66% {
-        opacity: 0;
-    }
-
     100% {
         opacity: 1;
     }
