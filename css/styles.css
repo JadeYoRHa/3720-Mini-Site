@@ -134,7 +134,7 @@ button {
     animation-duration: 3s;
     animation-iteration-count: 1;
     border-radius: 2px;
-    animation-fill-mode:both;
+    animation-fill-mode:forwards;
     transition: 1s;
 }
 
@@ -148,9 +148,11 @@ button {
 }
 
 @keyframes charging-1 {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 
-    33%,
-    100% {
-        opacity: 1;
-    }
+@keyframes charging-2 {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
 }
